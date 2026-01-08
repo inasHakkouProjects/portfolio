@@ -1,26 +1,104 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-violet-50: #f5f3ff;
+  --color-violet-100: #ede9fe;
+  --color-violet-200: #ddd6fe;
+  --color-violet-300: #c4b5fd;
+  --color-violet-400: #a78bfa;
+  --color-violet-500: #8b5cf6;
+  --color-violet-600: #7c3aed;
+  --color-violet-700: #6d28d9;
+  --color-violet-800: #5b21b6;
+  --color-violet-900: #4c1d95;
+  
+  --color-dark-bg: #0a0a0f;
+  --color-dark-surface: #141420;
+  --color-dark-card: #1a1a2e;
+  
+  --font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-glow: glow 2s ease-in-out infinite alternate;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes glow {
+  0% { box-shadow: 0 0 5px #8b5cf6, 0 0 10px #8b5cf6, 0 0 15px #8b5cf6; }
+  100% { box-shadow: 0 0 10px #8b5cf6, 0 0 20px #8b5cf6, 0 0 30px #8b5cf6; }
+}
+
+@layer base {
+  body {
+    @apply bg-dark-bg text-white antialiased;
+    font-family: var(--font-family-sans);
+  }
+  
+  html {
+    scroll-behavior: smooth;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .glass {
+    @apply bg-dark-card/80 backdrop-blur-xl border border-violet-500/20;
+  }
+  
+  .glass-strong {
+    @apply bg-dark-card/90 backdrop-blur-2xl border border-violet-500/30;
+  }
+
+  .glass-strong-black {
+    @apply bg-dark-card/90 backdrop-blur-2xl border border-violet-500/30;
+  }
+  
+  .glow-violet {
+    box-shadow: 0 0 20px rgba(164, 46, 194, 0.644);
+  }
+  
+  .text-glow {
+    text-shadow: 0 0 10px rgba(139, 92, 246, 0.8);
+  }
+  
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(to right, #c013a8, #e815ca, #f472d0);
+  }
+  
+  .btn-pink {
+    background-color: rgba(216, 39, 223, 0.644);
+  }
+  
+  .btn-pink:hover {
+    background-color: rgba(245, 35, 150, 0.89);
+  }
+  
+  .bg-gradient-violet {
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+  
+  .bg-gradient-dark {
+    background-image: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 100%);
+  }
+}
+
+/* Scrollbar personnalisée */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-violet-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-violet-500;
 }
