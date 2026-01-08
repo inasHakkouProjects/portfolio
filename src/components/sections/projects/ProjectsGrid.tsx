@@ -4,7 +4,6 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { projects, projectCategories } from '@/src/data/mockData'
 import { ProjectCard } from './ProjectCard'
-// @ts-expect-error: ProjectFilters module not found yet
 import { ProjectFilters } from './ProjectFilters'
 
 export function ProjectsGrid() {
@@ -29,7 +28,7 @@ export function ProjectsGrid() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.3 }}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
         >
           {filteredProjects.map((project, index) => (
             <motion.div
