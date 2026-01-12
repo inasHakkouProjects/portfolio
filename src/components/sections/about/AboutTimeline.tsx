@@ -32,21 +32,21 @@ export function AboutTimeline() {
 
   return (
     <section className="space-y-10">
-      <div className="text-center space-y-3">
+      <div className="space-y-3 text-center">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight"
+          className="text-3xl font-bold leading-tight md:text-4xl lg:text-5xl xl:text-6xl"
         >
-          <span className="text-white">Une chronologie d&apos;innovation</span>
+          <span className="text-white">Une chronologie d’innovation</span>
           <br />
           <span className="text-white"> et de</span>
           <span className="gradient-text text-glow"> développement</span>
         </motion.h2>
 
-        <p className="text-gray-400 leading-relaxed">
-          Une vue d&apos;ensemble de mon parcours professionnel, de mes formations académiques aux projets clés
+        <p className="leading-relaxed text-gray-400">
+          Une vue d’ensemble de mon parcours professionnel, de mes formations académiques aux projets clés
           qui ont défini mon expertise technique.
         </p>
       </div>
@@ -73,22 +73,14 @@ export function AboutTimeline() {
                   transition={{ type: 'spring', stiffness: 260, damping: 18 }}
                 >
                   <div
-                    className="
-                      group glass rounded-2xl p-6 border border-white/10
-                      hover:border-violet-400/80
-                      transition-colors
-                    "
+                    className="p-6 transition-colors border group glass rounded-2xl border-white/10 hover:border-violet-400/80"
                   >
                     {/* badge + period */}
                     <div className="flex items-start justify-between gap-4">
                       <span className={badgeClasses(label)}>{label}</span>
 
                       <span
-                        className="
-                          text-sm text-gray-300 px-3 py-1 rounded-lg border border-white/10 bg-white/5
-                          group-hover:text-black group-hover:border-black/10 group-hover:bg-white/70
-                          transition-colors
-                        "
+                        className="px-3 py-1 text-sm text-gray-300 transition-colors border rounded-lg border-white/10 bg-white/5 group-hover:text-black group-hover:border-black/10 group-hover:bg-white/70"
                       >
                         {it.period}
                       </span>
@@ -97,38 +89,30 @@ export function AboutTimeline() {
                     {/* title */}
                     <div className="mt-4">
                       <h3
-                        className="
-                          text-lg md:text-xl font-bold text-white
-                          group-hover:gradient-text
-                          transition-colors
-                        "
+                        className="text-lg font-bold text-white transition-colors md:text-xl group-hover:gradient-text"
                       >
                         {it.title}
                       </h3>
                     </div>
 
                     {/* org row */}
-                    <div className="mt-3 flex items-center gap-2 text-gray-300 transition-colors">
+                    <div className="flex items-center gap-2 mt-3 text-gray-300 transition-colors">
                       <Icon className="w-4 h-4" />
                       <span className="font-medium">{it.org}</span>
                     </div>
 
                     {/* description */}
-                    <p className="mt-3 text-gray-400 leading-relaxed transition-colors">
+                    <p className="mt-3 leading-relaxed text-gray-400 transition-colors">
                       {it.description}
                     </p>
 
                     {/* technologies (optionnel) */}
                     {it.technologies && (
-                      <div className="mt-4 flex flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-2 mt-4">
                         {it.technologies.split(',').map((t) => (
                           <span
                             key={t.trim()}
-                            className="
-                              text-xs px-2 py-1 rounded-lg border border-white/10 bg-white/5 text-gray-300
-                              group-hover:text-black group-hover:bg-white/70 group-hover:border-black/10
-                              transition-colors
-                            "
+                            className="px-2 py-1 text-xs text-gray-300 transition-colors border rounded-lg border-white/10 bg-white/5 group-hover:text-black group-hover:bg-white/70 group-hover:border-black/10"
                           >
                             {t.trim()}
                           </span>

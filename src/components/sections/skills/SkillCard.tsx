@@ -22,13 +22,13 @@ function AnimatedProgressBar({ level, delay }: { level: number; delay: number })
   const inView = useInView(ref, { once: true })
 
   return (
-    <div className="w-full bg-dark-surface rounded-full h-2 overflow-hidden">
+    <div className="w-full h-2 overflow-hidden rounded-full bg-dark-surface">
       <motion.div
         ref={ref}
         initial={{ width: 0 }}
         animate={inView ? { width: `${level}%` } : { width: 0 }}
         transition={{ duration: 1, delay, ease: 'easeOut' }}
-        className="h-full bg-gradient-to-r from-violet-600 to-violet-400 rounded-full"
+        className="h-full rounded-full bg-gradient-to-r from-violet-600 to-violet-400"
       />
     </div>
   )
@@ -36,18 +36,18 @@ function AnimatedProgressBar({ level, delay }: { level: number; delay: number })
 
 export function AboutSkills() {
   return (
-    <div className="text-center space-y-6">
+    <div className="space-y-6 text-center">
         <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight"
+            className="text-4xl font-bold leading-tight md:text-5xl lg:text-6xl xl:text-7xl"
         >
             <span className="text-white">Arsenal</span>
             <span className="gradient-text text-glow"> Technologique</span>
             {/* <span className="gradient-text text-glow">Code</span> */}
         </motion.h1>
-        <p className="text-gray-400 leading-relaxed text-xl">
+        <p className="text-xl leading-relaxed text-gray-400">
         Une vue détaillée de mon expertise technique, Un éventail de compétences techniques pour transformer vos idées en réalité
         </p>
     </div>
@@ -69,9 +69,9 @@ export function SkillCard({ category }: SkillCardProps) {
       <div className="space-y-4">
         {category.skills.map((skill, index) => (
           <div key={skill.name} className="space-y-2">
-            <div className="flex justify-between items-center">
-              <span className="text-gray-300 text-sm">{skill.name}</span>
-              <span className="text-violet-400 text-sm font-semibold">{skill.level}%</span>
+            <div className="flex items-center justify-between">
+              <span className="text-sm text-gray-300">{skill.name}</span>
+              <span className="text-sm font-semibold text-violet-400">{skill.level}%</span>
             </div>
             <AnimatedProgressBar level={skill.level} delay={index * 0.1} />
           </div>

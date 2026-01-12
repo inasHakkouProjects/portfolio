@@ -203,7 +203,7 @@ export function Navigation() {
                 })}
 
                 {/* CTA mobile */}
-                <motion.div variants={itemVariants} className="pt-2">
+                {/* <motion.div variants={itemVariants} className="pt-2">
                   <Link
                     href="/contact"
                     onClick={() => setIsOpen(false)}
@@ -211,7 +211,7 @@ export function Navigation() {
                   >
                     Connexion ✨
                   </Link>
-                </motion.div>
+                </motion.div> */}
               </motion.nav>
             </motion.div>
           </>

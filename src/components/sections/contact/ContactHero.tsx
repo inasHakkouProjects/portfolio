@@ -27,7 +27,7 @@ export function ContactHero() {
         className="max-w-3xl mx-auto text-xl leading-relaxed text-gray-300"
       >
         Vous avez un projet innovant ou une opportunité technique ? Discutons de la manière dont nous pouvons 
-        collaborer pour créer quelque chose d`&apos`exceptionnel.
+        collaborer pour créer quelque chose d’exceptionnel.
       </motion.p>
     </motion.div>
   )

@@ -7,34 +7,34 @@ export function AboutExpertiseVision() {
   return (
     <section className="space-y-10">
       {/* Header à droite */}
-      {/* <div className="text-left space-y-3">
-        <h1 className="text-6xl md:text-6xl font-bold text-white">
+      {/* <div className="space-y-3 text-left">
+        <h1 className="text-6xl font-bold text-white md:text-6xl">
           Une architecture scalable pour des solutions durables.
         </h1>
-        <p className="text-gray-400 leading-relaxed max-w-2xl ml-auto">
+        <p className="max-w-2xl ml-auto leading-relaxed text-gray-400">
           Mon approche combine rigueur technique et créativité numérique pour concevoir des expériences immersives et performantes.
           Chaque ligne de code est pensée pour l&apos;avenir.
         </p>
       </div> */}
-      <div className="text-left space-y-6">
+      <div className="space-y-6 text-left">
         <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight"
+            className="text-4xl font-bold leading-tight md:text-5xl lg:text-6xl xl:text-7xl"
         >
             <span className="text-white">Une architecture</span>
             <span className="gradient-text text-glow"> scalable</span><br></br>
             <span className="text-white">pour des solutions durables.</span>
             {/* <span className="gradient-text text-glow">Code</span> */}
         </motion.h1>
-        <p className="text-gray-400 leading-relaxed max-w-2xl">
+        <p className="max-w-2xl leading-relaxed text-gray-400">
           Mon approche combine rigueur technique et créativité numérique pour concevoir des expériences immersives et performantes.
-          Chaque ligne de code est pensée pour l&apos;avenir.
+          Chaque ligne de code est pensée pour l’avenir.
         </p>
     </div>
       {/* Cards */}
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {architecture.map((item) => (
           <motion.div
             key={item.name}
@@ -49,18 +49,13 @@ export function AboutExpertiseVision() {
             {/* Logo + line */}
             <div className="flex items-start justify-between gap-4">
               <div
-                className="
-                  w-12 h-12 rounded-xl border border-white/10 flex items-center justify-center
-                  bg-white/5
-                  group-hover:border-pink-400/80
-                  transition-colors
-                "
+                className="flex items-center justify-center w-12 h-12 transition-colors border  rounded-xl border-white/10 bg-white/5 group-hover:border-pink-400/80"
               >
                 {/* architecture.logo = image (path) */}
                 <img
                   src={item.logo}
                   alt={item.name}
-                  className="w-6 h-6 object-contain"
+                  className="object-contain w-6 h-6"
                 />
               </div>
 
@@ -69,16 +64,12 @@ export function AboutExpertiseVision() {
 
             <div className="mt-4 space-y-2">
               <h4
-                className="
-                  font-bold text-white text-xl
-                  group-hover:gradient-text
-                  transition-colors
-                "
+                className="text-xl font-bold text-white transition-colors  group-hover:gradient-text"
               >
                 {item.name}
               </h4>
 
-              <p className="text-gray-400 leading-relaxed">
+              <p className="leading-relaxed text-gray-400">
                 {item.description}
               </p>
 
