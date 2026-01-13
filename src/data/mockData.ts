@@ -227,6 +227,36 @@ export const personalInfo = {
       technicalApproach: 'Le site a été conçu avec une approche axée sur la performance, la lisibilité et l’accessibilité du contenu. L’architecture favorise une navigation intuitive et un chargement rapide des pages. Un design cohérent et des composants réutilisables assurent une expérience utilisateur fluide et une maintenance simplifiée.'
       // link: 'https://example.com',
     },
+    {
+      id: 5,
+      title: 'Application de gestion de projets – Symfony / Twig',
+      subtitle:'',
+      description: 'Application web de gestion de projets permettant d’organiser les tâches, suivre leur avancement et structurer le travail d’une équipe au sein d’une interface claire et efficace.',
+      image: '/projects/pictures/gestion-symfony.png',
+      video: 'https://res.cloudinary.com/drzzalwcm/video/upload/v1768311497/gestion_project_symfony_ns0184.mp4',
+      technologies: ['Symfony', 'Twig', 'Bootstrap', 'MySQL', 'Figma'],
+      category: 'backend',
+      createdAt: '01 février 2023',
+      projectType: 'Développement Full-Stack',
+      year: 2023,
+      technicalApproach: 'Ce projet a été conçu autour d’une architecture backend robuste et structurée, basée sur Symfony. La séparation claire des responsabilités garantit une application maintenable et évolutive. L’utilisation de Twig pour le rendu des vues, combinée à une logique métier bien organisée, permet une interface performante, cohérente et adaptée à un usage professionnel.'
+      // link: 'https://example.com',
+    },
+    {
+      id: 6,
+      title: 'Landing page – Plateforme de coaching en ligne (Angular)',
+      subtitle:'',
+      description: 'Landing page moderne conçue pour une plateforme de coaching en ligne, visant à présenter l’offre, les services et les bénéfices du coaching de manière claire et engageante.',
+      image: '/projects/pictures/onligne-coaching-siteWeb.png',
+      video: 'https://res.cloudinary.com/drzzalwcm/video/upload/v1768315686/enligne-courses-web_site_h3a10t.mp4',
+      technologies: ['Angular', 'Material-UI', 'Bootstrap', 'Figma'],
+      category: 'web-immersif',
+      createdAt: '10 aout 2024',
+      projectType: 'Développement Frontend',
+      year: 2024,
+      technicalApproach: 'Cette landing page a été développée avec une attention particulière portée à la performance, à la lisibilité et à la cohérence visuelle. L’architecture basée sur Angular permet une structuration claire des composants et une excellente maintenabilité.'
+      // link: 'https://example.com',
+    },
     // {
     //   id: 5,
     //   title: 'Plateforme SaaS CRM',
@@ -251,7 +281,7 @@ export const personalInfo = {
     { id: 'all', label: 'Tous' },
     { id: 'web-immersif', label: 'Web Immersif (3D)' },
     { id: 'saas', label: 'Application SaaS' },
-    // { id: 'backend', label: 'Architecture Backend' },
+    { id: 'backend', label: 'Architecture Backend' },
   ]
   
   
