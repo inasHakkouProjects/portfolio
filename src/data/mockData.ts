@@ -81,7 +81,7 @@ export const personalInfo = {
     {
       type: 'experience',
       title: 'Développeuse Full-Stack – CDI',
-      period: 'Depuis oct. 2025',
+      period: '2026',
       org: 'Nexcellis',
       description:
         "Développement de plateformes SaaS from scratch en totale autonomie. Conception d’architecture, APIs REST sécurisées et base PostgreSQL. Full-Stack UI (dashboards/back-office). DevOps (Docker, CI/CD, déploiement OVH, Nginx). Collaboration directe métier et pilotage technique.",
